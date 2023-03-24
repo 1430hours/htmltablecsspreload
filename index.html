@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Table</title>
-  <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
+<style id="style">
+/* leave this empty */
 </style>
-  
+<script>
+  setTimeout(function() {
+    // add CSS to the style tag after 2 seconds
+    const css = `
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    `;
+    document.getElementById('style').innerHTML = css;
+  }, 700);
+</script>
 </head>
 <body>
+
 <h2>HTML Table</h2>
 
 <table>
@@ -61,9 +67,6 @@ tr:nth-child(even) {
     <td>Italy</td>
   </tr>
 </table>
-  
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
 
 </body>
 </html>
